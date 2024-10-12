@@ -36,12 +36,12 @@ public class SpritesLoader : MonoBehaviour
         if (loadSpriteTask.Status == AsyncOperationStatus.Succeeded)
         {
             loadableImage.FillableImage.sprite = loadSpriteTask.Result;
+            loadableImage.FillableImage.color = Color.white;
         }
         else
         {
             Debug.LogError($"Failed to load sprite at path: {loadableImage.SpritePath}");
         }
-
     }
 
     private void OnDestroy()
